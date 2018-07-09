@@ -1,0 +1,27 @@
+{% include 'partial/header.html'%}
+
+<form action="{% url 'add' %}" style="border:1px solid #ccc" method="post">
+    {%csrf_token%}
+    <div class="container">
+
+        <label for="title"><b>Title</b></label>
+        <input type="text" placeholder="Enter Title" name="title" id="title" required>
+        <br>
+        <br>
+
+        <label for="Text"><b>Text</b></label>
+        <textarea placeholder="Enter Text" name="text" id="text" required></textarea>
+
+        <div class="clearfix">
+
+            <a href="/">
+                <button type="button" class="cancelbtn">Cancel</button>
+            </a>
+            <button type="submit" class="submit" value="submit">Add ToDo</button>
+        </div>
+    </div>
+
+
+</form>
+
+{% include 'partial/footer.html' %}
